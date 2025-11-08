@@ -3,7 +3,7 @@
   "displayName": "HTML to React",
   "publisher": "ganeshwayal",
   "description": "Convert selected HTML/CSS into React JSX (basic)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/ganesh3367/HTML_TO_REACT_EXTENSION.git"
