@@ -1,41 +1,33 @@
-HTML to React – VS Code Extension
+🌟 HTML to React – VS Code Extension
 
 🧠 Overview
 
-HTML to React is a Visual Studio Code extension that helps developers instantly convert any selected HTML/CSS code into React JSX format. It’s designed to make moving from static HTML to React components fast and hassle-free.
+HTML to React is a Visual Studio Code extension that helps developers instantly convert selected HTML/CSS code into clean and usable React JSX format. It simplifies the migration process from static HTML pages to React components.
 
 
 
 ⚙️ Features
 
-🧩 Converts standard HTML into clean JSX.
-
-🪄 Automatically replaces attributes like class → className, for → htmlFor.
-
-💅 Converts inline CSS to JSX-compliant style objects.
-
-⚡ Supports event handlers like onclick → onClick.
-
-🚀 Trigger conversion instantly using Ctrl + Alt + R (Windows/Linux) or Cmd + Option + R (Mac).
+✅ Converts plain HTML to JSX automatically.✅ Transforms attributes like class → className, for → htmlFor.✅ Converts inline CSS styles into JSX-compliant JavaScript objects.✅ Updates event handlers (e.g., onclick → onClick).✅ Works with a single command shortcut Ctrl + Alt + R (Windows/Linux) or Cmd + Option + R (Mac).
 
 🪶 How It Works
 
-Open any HTML or code file inside VS Code.
+Open your HTML or code file inside VS Code.
 
-Select your HTML snippet.
+Select the HTML snippet you want to convert.
 
 Press Ctrl + Alt + R (Windows/Linux) or Cmd + Option + R (Mac).
 
-A new tab opens showing your converted React JSX code.
+A new tab will open containing the converted React JSX code.
 
-Example:
+Example Input:
 
 <div class="card" style="background-color: lightblue; padding: 10px;">
   <h2>Hello World</h2>
   <button onclick="alert('Hi!')">Click</button>
 </div>
 
-Becomes:
+Output JSX:
 
 export default function MyComponent() {
   return (
@@ -52,64 +44,59 @@ From VS Code Marketplace
 
 Open VS Code.
 
-Go to the Extensions tab.
+Go to the Extensions view (Ctrl+Shift+X / Cmd+Shift+X).
 
 Search for HTML to React by Ganesh Wayal.
 
 Click Install.
 
-Manual Installation (VSIX)
+Manual Installation (VSIX File)
 
-If you downloaded the .vsix file:
+If you downloaded the .vsix file manually:
 
 code --install-extension html-to-react-converter-ganesh3367-0.0.1.vsix
 
-📸 Adding Screenshots / Previews
+📸 Adding Screenshots or Previews
 
-To show your extension visually on GitHub and Marketplace:
+To display screenshots in your GitHub or Marketplace page:
 
-Create a folder assets in your project root.
+Create a folder named assets in your project root.
 
-Add an image, e.g., preview.png.
+Add your preview image there (e.g., preview.png).
 
-Commit and push it to GitHub.
+Commit and push to GitHub.
 
 Use this Markdown in your README:
 
 ![HTML to React Preview](https://raw.githubusercontent.com/ganesh3367/HTML_TO_REACT_EXTENSION/main/assets/preview.png)
 
-✅ This image will show on your Marketplace and GitHub pages.
+✅ This image will now appear beautifully on both your GitHub and Marketplace listings.
 
 🧑‍💻 Development & Contribution
 
-Clone this repo:
+Want to contribute or customize it?
 
 git clone https://github.com/ganesh3367/HTML_TO_REACT_EXTENSION.git
-
-Install dependencies:
-
+cd HTML_TO_REACT_EXTENSION
 npm install
-
-Run in development mode:
-
 npm run compile
 
-Press F5 in VS Code to start debugging your extension.
+Press F5 in VS Code to run the extension in debug mode.
 
-Contributions are welcome! Feel free to open pull requests.
+Contributions, feature requests, and bug reports are welcome via pull requests.
 
 📦 Repository
 
-GitHub Repository → HTML_TO_REACT_EXTENSION
+🔗 View on GitHub → HTML_TO_REACT_EXTENSION
 
 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License — free to use, modify, and distribute.
 
 👤 Author
 
-Ganesh WayalPublisher: ganeshwayalCreator of HTML to React Converter ✨GitHub: @ganesh3367
+Ganesh Wayal🎯 Publisher: ganeshwayal💻 Creator of: HTML to React Converter Extension🔗 GitHub: @ganesh3367
 
-⭐ Support
+⭐ Support This Project
 
-If you find this extension useful, please give it a ⭐ on GitHub and leave a positive review on the VS Code Marketplace.
+If you like this extension, please give it a ⭐ on GitHub and leave a review on the VS Code Marketplace.
