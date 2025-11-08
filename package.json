@@ -3,7 +3,7 @@
   "displayName": "HTML to React (JS)",
   "publisher": "ganeshwayal",
   "description": "Convert selected HTML/CSS into React JSX using JavaScript",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -16,20 +16,23 @@
   ],
   "main": "./src/extension.js",
   "contributes": {
-    "commands": [
+  "commands": [
+    {
+      "command": "html-to-react.convert",
+      "title": "Convert to React Component"
+    }
+  ],
+  "menus": {
+    "editor/context": [
       {
         "command": "html-to-react.convert",
-        "title": "HTML to React: Convert Selection"
-      }
-    ],
-    "keybindings": [
-      {
-        "command": "html-to-react.convert",
-        "key": "ctrl+alt+r",
-        "when": "editorTextFocus"
+        "when": "editorHasSelection",
+        "group": "navigation"
       }
     ]
-  },
+  }
+}
+,
   "scripts": {
     "start": "code .",
     "package": "vsce package",

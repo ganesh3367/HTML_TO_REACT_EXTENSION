@@ -2,7 +2,7 @@ const vscode = require('vscode');
 const { convertHtmlToJsx } = require('./converter');
 
 function activate(context) {
-  console.log('✅ HTML to React (JS version) is now active!');
+  console.log('✅ HTML to React Extension (JS version) is active!');
 
   let disposable = vscode.commands.registerCommand('html-to-react.convert', async () => {
     const editor = vscode.window.activeTextEditor;
@@ -12,24 +12,31 @@ function activate(context) {
     }
 
     const selection = editor.selection;
-    const htmlCode = editor.document.getText(selection);
+    const htmlCode = editor.document.getText(selection).trim();
 
-    if (!htmlCode.trim()) {
-      vscode.window.showWarningMessage('Select some HTML code first!');
+    if (!htmlCode) {
+      vscode.window.showWarningMessage('Please select some HTML code first!');
       return;
     }
 
+    // Ask user for component name
     const componentName = await vscode.window.showInputBox({
-      prompt: 'Enter component name (optional)',
-      placeHolder: 'MyComponent'
+      prompt: 'Enter your React component name',
+      placeHolder: 'MyComponent',
+      ignoreFocusOut: true
     }) || 'MyComponent';
 
+    // Convert HTML → JSX
     const jsx = convertHtmlToJsx(htmlCode, componentName);
 
-    const newDoc = await vscode.workspace.openTextDocument({ content: jsx, language: 'javascriptreact' });
-    await vscode.window.showTextDocument(newDoc);
+    // Create new file for the React component
+    const doc = await vscode.workspace.openTextDocument({
+      content: jsx,
+      language: 'javascriptreact'
+    });
+    await vscode.window.showTextDocument(doc, { preview: false });
 
-    vscode.window.showInformationMessage('✅ HTML converted to React JSX!');
+    vscode.window.showInformationMessage(`✅ React component "${componentName}" created successfully!`);
   });
 
   context.subscriptions.push(disposable);
