@@ -2,40 +2,55 @@
   "name": "html-to-react-js",
   "displayName": "HTML to React (JS)",
   "publisher": "ganeshwayal",
-  "description": "Convert selected HTML/CSS into React JSX using JavaScript",
-  "version": "0.0.6",
+  "description": "Instantly convert selected HTML/CSS into clean React JSX components using JavaScript.",
+  "version": "10.0.0",
   "engines": {
     "vscode": "^1.80.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ganesh3367/HTML_TO_REACT_EXTENSION"
+  },
   "icon": "assets/icon.png",
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [
-    "onCommand:html-to-react.convert"
-  ],
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:html-to-react.convert"],
   "main": "./src/extension.js",
   "contributes": {
-  "commands": [
-    {
-      "command": "html-to-react.convert",
-      "title": "Convert to React Component"
-    }
-  ],
-  "menus": {
-    "editor/context": [
+    "commands": [
       {
         "command": "html-to-react.convert",
-        "when": "editorHasSelection",
-        "group": "navigation"
+        "title": "Convert to React Component"
       }
-    ]
-  }
-}
-,
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "html-to-react.convert",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
   "scripts": {
+    "compile": "echo \"No TypeScript build needed, using JS version\" && exit 0",
     "start": "code .",
     "package": "vsce package",
-    "publish": "vsce publish"
-  }
+    "publish": "vsce publish",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "vsce": "^2.15.0"
+  },
+  "keywords": [
+    "react",
+    "html",
+    "jsx",
+    "converter",
+    "javascript",
+    "frontend",
+    "ganeshwayal",
+    "html-to-react"
+  ]
 }
