@@ -1,7 +1,7 @@
 {
-  "name": "html-to-react-js",
-  "displayName": "HTML to React (JS)",
-  "publisher": "ganeshwayal",
+  "name": "html-to-react-converter-ganesh3367",
+  "displayName": "G-HTML2React Engine",
+  "publisher": "GaneshWayal",
   "description": "Instantly convert selected HTML/CSS into clean React JSX components using JavaScript.",
   "version": "10.0.0",
   "engines": {
